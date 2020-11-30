@@ -5,13 +5,11 @@ import { StyleSheet, Text, View } from 'react-native';
 const WelcomeScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <Text>Open up App.js to start working on your app!</Text>
+            <Text>Welcome Screen</Text>
             <StatusBar style="auto" />
         </View>
     )
 };
-
-export default memo(WelcomeScreen);
 
 const styles = StyleSheet.create({
     container: {
@@ -21,3 +19,5 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
   });
+
+  export default memo(WelcomeScreen);
