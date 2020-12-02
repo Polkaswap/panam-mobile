@@ -11,7 +11,9 @@ const PanamButton = ({ message, ...props }) => (
 const styles = StyleSheet.create({
     container: {
       marginTop: 10,
-      marginBottom: 10
+      marginBottom: 10,
+      paddingTop:5,
+      paddingBottom:5
     },
 });
 

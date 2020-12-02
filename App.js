@@ -1,7 +1,9 @@
 import React from 'react';
+import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
 import { configureFonts, DefaultTheme, Provider as ProviderPeper } from 'react-native-paper';
 
 import App from './index.js';
+import { AppLoading } from 'expo';
 
 const fontConfig = {
   regular: {
@@ -46,6 +48,14 @@ const theme = {
 //const { store, persistor } = configureStore();
 
 export default function Main() {
+  let [fontsLoaded] = useFonts({
+    Inter_900Black,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
   return (
     //<Provider /*store={store}*/>
       //<PersistGate loading={<Text>Loading...</Text>} persistor={persistor}>
